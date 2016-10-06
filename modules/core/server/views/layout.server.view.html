@@ -28,6 +28,10 @@
   <meta name="twitter:url" content="{{url}}">
   <meta name="twitter:image" content="{{logo}}">
 
+<!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+<!--<link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.css" />-->
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Fav Icon -->
   <link href="{{favicon}}" rel="shortcut icon" type="image/x-icon">
 
@@ -36,10 +40,11 @@
 </head>
 
 <body class="ng-cloak">
-  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <section class="content">
-    <section class="container">
+  <header ng-include="'/modules/core/client/views/header.client.view.html'"></header>
+  <section class="wrapper content"  >
+    <section class="container container-table">
       {{{block "content"}}}
+    <footer ng-include="'/modules/core/client/views/footer.client.view.html'"></footer>
     </section>
   </section>
 

@@ -1,0 +1,121 @@
+body, h1, h2 {
+  font-family: 'Open Sans' !important; }
+
+iframe {
+  border: none;
+  width: 100%; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+a {
+  color: #A7166A; }
+  a:hover, a:focus {
+    text-decoration: none;
+    color: #231f20; }
+
+.disable-link {
+  text-decoration: none !important;
+  color: #E9E9E9;
+  cursor: default; }
+  .disable-link:hover {
+    text-decoration: none;
+    color: #E9E9E9; }
+
+.caption {
+  font-style: italic; }
+
+.lighter {
+  font-weight: lighter; }
+
+.extra-bold {
+  font-weight: 700;
+  font-stretch: expanded; }
+
+body {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 10px; }
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 10px; }
+
+p {
+  font-size: 1em; }
+
+.img-inline {
+  margin: 0;
+  padding: 7px 0 7px 0;
+  width: 100%;
+  height: auto; }
+
+.bg-magenta {
+  background-color: #A7166A; }
+
+.bg-green {
+  background-color: #2F6600; }
+
+.bg-twiter {
+  background-color: #00aced; }
+
+.bg-facebook {
+  background-color: #3b5998; }
+
+.bg-googleplus {
+  background-color: #dd4b39; }
+
+.bg-linkedin {
+  background-color: #007bb6; }
+
+.bg-digg {
+  background-color: #00AECE; }
+
+.bg-tumblr {
+  background-color: #32506d; }
+
+.bg-reddit {
+  background-color: #00AECE; }
+
+.bg-stumbleupon {
+  background-color: #EB4823; }
+
+.bg-hacker-news {
+  background-color: #00AECE; }
+
+.magenta {
+  color: #A7166A; }
+
+.row.gutter-0 {
+  margin-left: 0;
+  margin-right: 0; }
+  .row.gutter-0 [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0; }
+
+.row.gutter-10 {
+  margin-left: -5px;
+  margin-right: -5px; }
+  .row.gutter-10 [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px; }
+
+.row.gutter-20 {
+  margin-left: -10px;
+  margin-right: -10px; }
+  .row.gutter-20 [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px; }

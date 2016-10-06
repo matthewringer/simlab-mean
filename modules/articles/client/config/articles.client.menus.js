@@ -9,17 +9,10 @@
 
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
-      title: 'Articles',
-      state: 'articles',
-      type: 'dropdown',
-      roles: ['*']
-    });
-
-    // Add the dropdown list item
-    menuService.addSubMenuItem('topbar', 'articles', {
-      title: 'List Articles',
+      title: 'Stories',
       state: 'articles.list',
-      roles: ['*']
+      roles: ['*'],
+      position: 2
     });
   }
 }());

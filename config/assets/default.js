@@ -7,9 +7,9 @@ module.exports = {
     lib: {
       css: [
         // bower:css
-        'public/lib/bootstrap/dist/css/bootstrap.css',
-        'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-        'public/lib/ng-img-crop/compile/unminified/ng-img-crop.css'
+        // 'public/lib/bootstrap/dist/css/bootstrap.css',
+        // 'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+        // 'public/lib/ng-img-crop/compile/unminified/ng-img-crop.css'
         // endbower
       ],
       js: [
@@ -35,7 +35,9 @@ module.exports = {
       'modules/*/client/less/*.less'
     ],
     sass: [
-      'modules/*/client/scss/*.scss'
+      'modules/*/client/scss/*.scss',
+      'public/lib/bootstrap-sass/assets/stylesheets/**/*.scss',
+      'public/lib/font-awesome/scss/*.scss'
     ],
     js: [
       'modules/core/client/app/config.js',

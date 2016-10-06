@@ -1,0 +1,39 @@
+<div ng-controller="FooterController as vm" class="row">
+    <div class="col-sm-4 border-left" style="min-height:130px;">
+        <h2 class="small-logo">
+            <a href="/" ng-include="'/modules/core/client/img/brand/logo.svg'"> </a> <span class="lighter">SIM</span><b class="magenta">Lab</b></h2>
+        <div style="position:relative; top:-70px;" ng-include="'/modules/core/client/views/includes/social-buttons.client.view.html'">
+            {% include html/social_buttons %}
+        </div>
+        <div class="text-left address">
+            <p>1110 Vermont Ave NW Washington, DC</p>
+        </div>
+    </div>
+    <div class="col-sm-4 border-left left-divider right-divider" style="min-height:130px;">
+        <div class="col-sm-offset-3 col-sm-6">
+            <h3>Site Map</h3>
+            <ul class="nav navbar-nav" ng-if="vm.menu.shouldRender(vm.authentication.user);">
+                <li ng-repeat="item in vm.menu.items | orderBy: 'position'" ng-switch="item.type" ng-if="item.shouldRender(vm.authentication.user);"
+                    ui-sref-active="active" class="{{item.class}}">
+                    <a ng-switch-when="dropdown" ui-sref="{{item.items[0].state}}({{item.items[0].params}})" ng-bind="item.title"></a>
+                    <a ng-switch-default ui-sref="{{item.state}}" ng-bind="item.title"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-4 border-right">
+        <div class="col-md-offset-1 col-sm-9" style="min-height:130px;">
+            <h3>Subscribe</h3>
+            <p>Subscribe to our mailing list. <a href="mailto:hello@simlab.org">hello@simlab.org</a></p>
+        </div>
+    </div>
+</div>
+<hr class="light" />
+<div class="row" style="padding-top:10px;">
+    <div class="col-sm-6">
+        <p>To work with us, send us an email at <a href="mailto:hello@simlab.org">hello@simlab.org</a></p>
+    </div>
+    <div class="col-sm-6 col-sm-push-1">
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> All SIMLab-owned content is licensed CC-BY-NC-SA 4.0.</a>
+    </div>
+</div>

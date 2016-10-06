@@ -8,6 +8,14 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
+    // Link to home
+    menuService.addMenuItem('topbar', {
+      title: 'Home',
+      state: 'home',
+      roles: ['*'],
+      position: 0
+    });
+
     menuService.addMenu('account', {
       roles: ['user']
     });

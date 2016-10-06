@@ -1,0 +1,222 @@
+//Soclial media colors
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$pinterest: #cb2027;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$vimeo: #aad450;
+$tumblr: #32506d;
+$instagram: #517fa4;
+$flickr: #ff0084;
+$dribbble: #ea4c89;
+$quora: #a82400;
+$foursquare: #0072b1;
+$forrst: #5B9A68;
+$vk: #45668e;
+$wordpress: #21759b;
+$stumbleupon: #EB4823;
+$yahoo: #7B0099;
+$blogger: #fb8f3d;
+$soundcloud: #ff3a00;
+//simlab colors
+$simlab-primary-magenta: #A7166A;
+$simlab-primary-black: #231f20;
+$simlab-primary-grey: #E9E9E9;
+$simlab-secondary-darkblue: #1B579F;
+$simlab-secondary-slate: #004650;
+$simlab-secondary-lightblue: #00AECE;
+$simlab-secondary-yellow: #C6DB00;
+$simlab-secondary-green: #55BE47;
+$simlab-secondary-darkgreen: #2F6600;
+
+//fonts
+%opensans { font-family: 'Open Sans' !important; }
+
+//media queries
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+
+@mixin minimum {
+  @media (min-width: 0) and (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+iframe {
+    border: none;
+    width: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: $simlab-primary-magenta;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $simlab-primary-black;
+    }
+}
+
+.disable-link
+{
+    text-decoration: none !important;
+    color: $simlab-primary-grey;
+    cursor: default;
+     &:hover {
+        text-decoration: none;
+        color: $simlab-primary-grey;
+    }
+}
+
+.caption {
+    font-style: italic;
+}
+
+.lighter {
+    font-weight:lighter;
+}
+
+.extra-bold {
+    font-weight: 700;
+    font-stretch: expanded;
+}
+
+body {
+    @extend %opensans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    @extend %opensans;
+    font-size: 2em;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    @extend %opensans;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+}
+
+.img-inline {
+    margin: 0;
+    padding: 7px 0 7px 0;
+    width: 100%;
+    height: auto;
+}
+
+.bg-magenta {
+    background-color: $simlab-primary-magenta;
+}
+
+.bg-green {
+    background-color: $simlab-secondary-darkgreen;
+}
+
+.bg-twiter {
+    background-color: $twitter;
+}
+
+.bg-facebook {
+    background-color: $facebook;
+}
+
+.bg-googleplus {
+    background-color: $googleplus;
+}
+
+.bg-linkedin {
+    background-color: $linkedin;
+}
+
+.bg-digg {
+    //todo: unknown
+    background-color: $simlab-secondary-lightblue;
+}
+
+.bg-tumblr {
+    background-color: $tumblr;
+}
+
+.bg-reddit {
+    //todo: unknown
+    background-color: $simlab-secondary-lightblue;
+}
+
+.bg-stumbleupon {
+    background-color: $stumbleupon;
+}
+
+.bg-hacker-news {
+    //todo: unknown
+    background-color: $simlab-secondary-lightblue;
+}
+
+.magenta {
+        color: $simlab-primary-magenta;
+}
+
+.row.gutter-0 {
+    margin-left: 0;
+    margin-right: 0;
+    [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.row.gutter-10 {
+    margin-left: -5px;
+    margin-right: -5px;
+    [class*="col-"] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.row.gutter-20 {
+    margin-left: -10px;
+    margin-right: -10px;
+    [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

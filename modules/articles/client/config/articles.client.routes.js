@@ -11,7 +11,7 @@
     $stateProvider
       .state('articles', {
         abstract: true,
-        url: '/articles',
+        url: '/stories',
         template: '<ui-view/>'
       })
       .state('articles.list', {
@@ -32,7 +32,7 @@
           articleResolve: getArticle
         },
         data: {
-          pageTitle: 'Article {{ articleResolve.title }}'
+          pageTitle: 'Story {{ articleResolve.title }}'
         }
       });
   }

@@ -1,0 +1,14 @@
+<div ng-controller="ServicesListController as vm" class="menu">
+  <h2 class="extra-bold">Services
+    <a href="/services" class="fa fa-chevron-circle-right "></a>
+  </h2>
+  <ul class="list-unstyled">
+    <li ng-repeat="service in vm.services">
+      <div>
+        <p>
+          <a class="extra-bold" ui-sref="services.view({ serviceId: service._id })">{{service.name}}</a><br/><span>{{service.description}}</span>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
